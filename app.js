@@ -1,6 +1,16 @@
-const http = require("http");
-const routes = require("./routes");
+const express = require("express");
 
-const server = http.createServer(routes);
+const app = express();
 
-server.listen(3000);
+app.use("/", (req, res, next) => {
+  console.log("always running!");
+  next();
+});
+app.use("/product", (req, res, next) => {
+  res.send("<h1>Product Page!</h1>");
+});
+app.use("/", (req, res, next) => {
+  res.send("<h1>Hello form Express.JS!</h1>");
+});
+
+app.listen(3000);
