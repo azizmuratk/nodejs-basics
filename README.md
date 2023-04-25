@@ -1,2 +1,2 @@
 # nodejs-basics
- I will share my knowledge about NodeJs
+ I will share my knowledge about Node.Js
